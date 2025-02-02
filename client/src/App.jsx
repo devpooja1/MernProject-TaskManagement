@@ -3,7 +3,11 @@ import Layout from "./Layout";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import CreateEmp from "./pages/CreateEmp";
-
+import AssignTask from "./pages/AssignTask";
+import DisplayEmpTask from "./pages/DisplayEmpTask";
+import EmpDashboard from "./pages/EmpDashboard";
+import EmpReport from "./pages/EmpReport";
+import ChangePassword from "./pages/changePassword";
 
 
 const App=()=>{
@@ -16,8 +20,14 @@ const App=()=>{
     <Route path="login" element={<Login/>}/>
     <Route path="dashboard" element={<Dashboard/>}>
       <Route path="createemp" element={<CreateEmp/>}/>
+      <Route path="assigntask" element={<AssignTask/>}/>
+      <Route path="viewtask" element={<EmpReport/>}/>
     </Route>
-
+    <Route path="empdashboard" element={<EmpDashboard/>}>
+      <Route path="displaytask" element={<DisplayEmpTask/>}/>
+      <Route path="changepassword" element={<ChangePassword/>}/>
+      
+    </Route>
     
 
     </Route>

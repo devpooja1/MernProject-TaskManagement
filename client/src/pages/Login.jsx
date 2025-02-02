@@ -3,14 +3,16 @@ import { useState } from "react";
 import axios from "axios";
 import {message} from "antd";
 import { useNavigate } from "react-router-dom";
+import "../css/login.css"
 
 
 const Login=()=>{
-  const navigate=useNavigate();
+  
   const [userid, setUserID] = useState("");
   const [password, setPassword] = useState("");
   const [usertype , setUsertype] = useState("");
-  console.log(userid,password, usertype);
+  const navigate=useNavigate();
+  // console.log(userid,password, usertype);
 
   const handleSubmit=async()=>{
     if (usertype=="admin")
@@ -21,6 +23,9 @@ const Login=()=>{
         console.log(response.data);
         if(response.status==200)
         {
+          console.log(response.data);
+          localStorage.setItem("adminname",response.data.username);
+          localStorage.setItem("adminid",response.data.userid)
           message.success("Login Successfully!");
           navigate("/dashboard");
         }
@@ -29,14 +34,23 @@ const Login=()=>{
         
       }
     }
-    else if(usertype=='employee')
+    else 
+    if(usertype=="employee")
     {
        try {
-        let api="http://localhost:8000/employee/employeelogin";
-        const response= await axios.post(api,{userid:userid, password:password});
-        console.log(response);
+        let api = "http://localhost:8000/employee/employeelogin";
+        const response= await axios.post(api, {userid:userid, password:password});
+        // console.log(response.data);
+        if(response.status==200)
+        {
+          localStorage.setItem("empname", response.data.empname);
+          localStorage.setItem("empemail",response.data.email);
+          localStorage.setItem("empid",response.data._id);
+          message.success("Login Successfully!!");
+          navigate("/EmpDashboard")
+        }
        } catch (error) {
-            console.log(error)
+          message.error(error.response.data.msg)
        }
     }
   }
