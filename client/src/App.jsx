@@ -7,7 +7,7 @@ import AssignTask from "./pages/AssignTask";
 import DisplayEmpTask from "./pages/DisplayEmpTask";
 import EmpDashboard from "./pages/EmpDashboard";
 import EmpReport from "./pages/EmpReport";
-import ChangePassword from "./pages/ChangePassword";
+import ChangePassword from "./pages/ChangePassword1";
 
 
 
