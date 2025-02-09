@@ -19,7 +19,7 @@ const CreateEmp=()=>{
         
         const handleSubmit=async(e)=>{
           e.preventDefault();
-            let api = "http://localhost:8000/admin/createemp";
+            let api = "https://mernproject-taskmanagement.onrender.com/admin/createemp";
             try {
                 const response = await axios.post(api,input);
                 console.log(response.data);

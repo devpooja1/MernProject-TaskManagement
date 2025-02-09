@@ -25,7 +25,7 @@ const ChangePassword=()=>{
     const handelSubmit=async()=>{
 
         try {
-            let api="http://localhost:8000/employee/changepassword";
+            let api="https://mernproject-taskmanagement.onrender.com/employee/changepassword";
                 const response = await axios.post(api, {empid:empid, ...input})
                  message.success("password succesfulley change!!!")
                  console.log(response.data)

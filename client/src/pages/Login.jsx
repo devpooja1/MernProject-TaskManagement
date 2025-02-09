@@ -18,7 +18,7 @@ const Login=()=>{
     if (usertype=="admin")
     {
       try {
-        let api = "http://localhost:8000/admin/adminlogin";
+        let api = "https://mernproject-taskmanagement.onrender.com/admin/adminlogin";
         const response = await axios.post(api, {userid:userid , password:password});
         console.log(response.data);
         if(response.status==200)
@@ -38,7 +38,7 @@ const Login=()=>{
     if(usertype=="employee")
     {
        try {
-        let api = "http://localhost:8000/employee/employeelogin";
+        let api = "https://mernproject-taskmanagement.onrender.com/employee/employeelogin";
         const response= await axios.post(api, {userid:userid, password:password});
         // console.log(response.data);
         if(response.status==200)

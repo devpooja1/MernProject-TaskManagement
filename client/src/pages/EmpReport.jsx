@@ -10,7 +10,7 @@ const EmpReport=()=>{
     const [mydata, setMydata] = useState([]);
 
     const loadData=async()=>{
-        let api="http://localhost:8000/admin/showreport";
+        let api="https://mernproject-taskmanagement.onrender.com/admin/showreport";
         try{
             const response = await axios.get(api);
             setMydata(response.data);
@@ -29,7 +29,7 @@ const EmpReport=()=>{
     },[]);
 
     const reassignTask = async(taskid)=>{
-        let api = "http://localhost:8000/admin/taskreassign";
+        let api = "https://mernproject-taskmanagement.onrender.com/admin/taskreassign";
         try {
             const response = await axios.post(api, {taskid:taskid});
             message.success(response.data.msg);
