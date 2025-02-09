@@ -23,7 +23,7 @@ const CreateEmp=()=>{
             try {
                 const response = await axios.post(api,input);
                 console.log(response.data);
-                message.success("Employee successfully created!!!!")
+                message.success("Employee successfully created!!!")
                 }
                 
             catch (error) {
