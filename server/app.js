@@ -7,7 +7,7 @@ const empRoute = require("./routes/empRoute");
 const bodyparser = require("body-parser");
 
 require("dotenv").config();
-const port = process.env.PORT;
+const port = process.env.PORT || 8000;
 const dbcon = process.env.DBCON;
 mongoose.connect(dbcon).then(()=>{
     console.log("DB Connnected !!!");
