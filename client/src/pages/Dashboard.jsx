@@ -31,6 +31,7 @@ const Dashboard=()=>{
             <div id="adminRightData" >
             <Outlet/>
             </div>
+            
         </div>
         
         
