@@ -4,7 +4,8 @@ const EmpSchema = new mongoose.Schema({
     email:String,
     emptype:String,
     password:String,
-    oldpassword:String
+    oldpassword:String,
+    newpassword:String
 
    
 })

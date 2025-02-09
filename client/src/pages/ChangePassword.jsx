@@ -1,74 +1,50 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import {message}   from "antd";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import Password from "antd/es/input/Password";
-
 
 const ChangePassword=()=>{
+    const[input, setInput]=useState({});
+    const [empid, setEmpid]=useState("")
 
-    const [input, setInput] = useState({
-        
-            currentPassword: "",
-            newPassword: "",
-            confirmPassword: ""
-        
-    
-    });
+    const navigate=useNavigate();
 
-    const handleInput=(e)=>{
-        let name = e.target.name;
-        let value = e.target.value;
-        setInput(values=>({...values,[name]:value}));
+    useEffect(()=>{
+        setEmpid(localStorage.getItem("empid"))
+       
+},[])
+        
+    const handelInput=(e)=>{
+        let name=e.target.name;
+        let value=e.target.value;
+        setInput(values=>({...values,[name]:value}))
+        
     }
 
-    const handleSubmit = async (password) => {
-        const api = "http://localhost:8000/employee/changepassword";
+
+    const handelSubmit=async()=>{
+
         try {
-            const response = await axios.post(api, {Password:password});
-            alert(response.data.message);
-            // setInput({email:"" ,oldPassword: "", newPassword: "" }); // Reset form
+            let api="http://localhost:8000/employee/changepassword";
+                const response = await axios.post(api, {empid:empid, ...input})
+                 message.success("password succesfulley change!!!")
+                 console.log(response.data)
+                 navigate("/empdashboard")
+                   
         } catch (error) {
-            alert(error.response?.data?.message || "Error changing password");
-            // console.log(error);
+            console.log(error)
         }
+
     }
 
     return(
         <>
-        <center>
-        <h2>.....Change Your Password.....</h2>
+        <div className="passwordChange">
 
-        <input
-                    type="email"
-                    name="email"
-                    placeholder="Enter your email"
-                    value={input.email}
-                    onChange={handleInput}
-                    required
-                />
-                <br />
-
-        <input
-                    type="password"
-                    name="oldPassword"
-                    placeholder="Enter old password"
-                    value={input.oldPassword}
-                    onChange={handleInput}
-                    required
-                />
-                <br />
-                <input
-                    type="password"
-                    name="newPassword"
-                    placeholder="Enter new password"
-                    value={input.newPassword}
-                    onChange={handleInput}
-                    required
-                />
-                <br />
-                <button onClick={handleSubmit} >Change Password</button>
-
-
-        </center>
+        <input type="password" placeholder="old password"  name="oldpassword" onChange={handelInput} /><br />
+        <input type="password" placeholder="new password" name="newpassword" onChange={handelInput} />
+        <button onClick={handelSubmit}>Submit</button>
+        </div>
         </>
     )
 }

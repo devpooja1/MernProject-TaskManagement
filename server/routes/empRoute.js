@@ -8,5 +8,6 @@ const EmpController = require("../controllers/empController");
 route.post("/employeelogin", EmpController.emploginCheck);
 route.post("/emptaskdisplay", EmpController.empTaskDisplay);
 route.post("/emptasksubmit", EmpController.empTaskSubmit);
-route.post("/changepassword", EmpController.chnagePassword);
+route.post("/changepassword", EmpController.passwordChange);
+
 module.exports = route;

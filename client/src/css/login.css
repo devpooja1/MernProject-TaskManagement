@@ -89,7 +89,7 @@ body {
   /* General header styling */
 .header {
     display: flex;
-    width: 218vh;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;

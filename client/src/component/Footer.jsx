@@ -2,8 +2,6 @@ import React from 'react';
 import {
   MDBFooter,
   MDBContainer,
-  MDBCol,
-  MDBRow,
   MDBIcon,
   MDBBtn
 } from 'mdb-react-ui-kit';
@@ -41,7 +39,7 @@ const Footer=()=>{
         </section>
       </MDBContainer>
 
-      <div className='text-center p-3' style={{ backgroundColor: '#098196', height:'50px', paddingTop:'60px',marginTop:'20px'}} >
+      <div className='text-center p-3' style={{ backgroundColor: '#098196', height:'70px', paddingTop:'50px',marginTop:'20px'}} >
         © 2020 Copyright:   
         <a className='text-white' href='https://mdbootstrap.com/'>
           www.taskmanagement.com

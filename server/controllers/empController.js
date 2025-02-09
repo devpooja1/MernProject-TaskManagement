@@ -1,3 +1,4 @@
+const empModel = require("../models/empModel");
 const EmpModel = require("../models/empModel");
 const TaskModel = require("../models/taskModel");
 
@@ -39,33 +40,53 @@ const empTaskSubmit =async(req,res)=>{
         console.log(error);
     }
 }
-const chnagePassword = async(req,res)=>{
-    const { oldPassword, newPassword } = req.body;
+// const chnagePassword = async(req,res)=>{
+//     const { oldPassword, newPassword } = req.body;
 
-    if (!oldPassword || !newPassword) {
-        return res.status(400).json({ message: "All fields are required" });
-    }
+//     if (!oldPassword || !newPassword) {
+//         return res.status(400).json({ message: "All fields are required" });
+//     }
 
-    try {
-        const employee = await EmpModel.findOne({ password: currentPassword });
-        if (!employee) {
-            return res.status(400).json({ message: "Current password is incorrect" });
+//     try {
+//         const employee = await EmpModel.findOne({ password: currentPassword });
+//         if (!employee) {
+//             return res.status(400).json({ message: "Current password is incorrect" });
+//         }
+
+//         // Updating password without hashing
+//         employee.password = newPassword;
+//         await employee.save();
+
+//         res.status(200).json({ message: "Password changed successfully" });
+//     } catch (error) {
+//         console.error("Error changing password:", error);
+//         res.status(500).json({ message: "Server error", error });
+//     }
+// }
+const passwordChange=async(req,res)=>{
+    const {oldpassword,newpassword,empid}=req.body;
+ try {
+     
+        const Data=await EmpModel.findById(empid);
+        console.log(Data)
+        const chkpass= await bcrypt.compare(oldpassword, Data.password);
+
+        if(chkpass){
+             const salt = await bcrypt.genSalt();
+             const passwordHash = await bcrypt.hash(newpassword,salt);
+              await EmpModel.findByIdAndUpdate(empid,{password:passwordHash})
+              res.status(200).send({msg:"password updated"})
+        
         }
+ } catch (error) {
+     res.status(400).send({ msg: "old password does not match!!!" });  
+ }
 
-        // Updating password without hashing
-        employee.password = newPassword;
-        await employee.save();
-
-        res.status(200).json({ message: "Password changed successfully" });
-    } catch (error) {
-        console.error("Error changing password:", error);
-        res.status(500).json({ message: "Server error", error });
-    }
 }
 
 module.exports={
     emploginCheck,
     empTaskDisplay,
     empTaskSubmit,
-    chnagePassword
+    passwordChange
 }
