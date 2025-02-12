@@ -1,7 +1,7 @@
-/* /* Footer Styling
+ Footer Styling
 .bg-dark {
-  background-color: #3e4246 !important; /* Dark background */
-/* }
+   background-color: #3e4246 !important; /*Dark background */
+}
 
 .text-white {
   color: white !important;
@@ -12,17 +12,17 @@
   text-align: center;
 } */
 
-/* Social Media Icons
+/* Social Media Icons*/
 .footer-container section .m-1 {
   transition: transform 0.3s ease-in-out;
 }
 
 .footer-container section .m-1:hover {
   transform: scale(1.2); /* Slightly increase size on hover */
-/* } */ */
+ } 
 
 /* Footer Bottom Section */
-/* .footer-bottom {
+ .footer-bottom {
   background-color: #098196;
   height: 70px;
   display: flex;
@@ -39,9 +39,9 @@
 
 .footer-bottom a:hover {
   text-decoration: underline;
-} */
+} 
 
-/* Responsive Design *//*
+/* Responsive Design */
 @media (max-width: 768px) {
   .footer-container {
     padding: 15px;
@@ -62,7 +62,7 @@
   .footer-bottom {
     font-size: 12px;
   }
-} */
+}
 
 
 /*---------------------------------- */

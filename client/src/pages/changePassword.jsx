@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import {message}   from "antd";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import Button from "react-bootstrap/Button";
 import "../css/changepassword.css"
 
 const ChangePassword=()=>{
@@ -44,7 +45,7 @@ const ChangePassword=()=>{
 
         <input type="password" placeholder="old password"  name="oldpassword" onChange={handelInput} /><br />
         <input type="password" placeholder="new password" name="newpassword" onChange={handelInput} />
-        <button onClick={handelSubmit}>Submit</button>
+        <Button style={{backgroundColor:"#098196"}} onClick={handelSubmit}>Submit</Button>
         </div>
         </>
     )

@@ -3,7 +3,7 @@ import { useState } from "react";
 import axios from "axios";
 import {message} from "antd";
 import { useNavigate } from "react-router-dom";
-import "../css/login.css"
+// import "../css/login.css"
 
 
 const Login=()=>{
@@ -61,7 +61,7 @@ const Login=()=>{
 
       <div className="text-center">
         <img src="src\images\img1.jpg"
-          style={{width: '200px'}} alt="logo" />
+          style={{width: '185px'}} alt="logo" />
         <h4 className="mt-1 mb-5 pb-1" style={{color:"#098196", fontSize:"25px", fontWeight:"600"}}>We are The Team</h4>
       </div>
       

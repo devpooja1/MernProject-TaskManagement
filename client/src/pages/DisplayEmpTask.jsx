@@ -64,8 +64,8 @@ const DisplayEmpTask=()=>{
                 </td>
                 <td>
                     {key.empreport=="submitted"?
-                    (<Button disabled>Submitted</Button>):
-                    (<Button onClick={()=>{taskSubmit(key._id)}}>Send</Button>)}
+                    (<Button style={{backgroundColor:"#098196"}} disabled>Submitted</Button>):
+                    (<Button style={{backgroundColor:"#098196"}} onClick={()=>{taskSubmit(key._id)}}>Send</Button>)}
                 </td>
             </tr>
             </>
@@ -77,7 +77,7 @@ const DisplayEmpTask=()=>{
     return(
 
         <>
-        <h1>Your Task/ Assignment </h1>
+        <h1 align="center">Your Task/ Assignment </h1>
         <Table striped bordered hover>
         <thead>
             <tr>

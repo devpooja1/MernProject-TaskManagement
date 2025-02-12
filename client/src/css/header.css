@@ -1,63 +1,61 @@
 /* Base Header Styles */
 .header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #098196; /* Blue background */
-    padding: 15px 20px;
-    justify-content: space-between;
-    width: 100%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #098196; /*  background color */
+  padding: 15px 20px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo Container */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Spacing between logo and text */
+}
+
+/* Logo Image */
+.logo-image {
+  width: 60px; /* Default size */
+  height: auto;
+  border-radius: 50%; /* Optional: Makes the logo circular */
+}
+
+/* Logo Text */
+.logo-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 15px;
   }
-  
-  /* Logo Container */
+
   .logo {
-    display: flex;
-    align-items: center;
-    gap: 15px; /* Spacing between logo and text */
+    flex-direction: column; /* Stack logo and text vertically */
+    text-align: center;
   }
-  
-  /* Logo Image */
+
   .logo-image {
-    width: 60px; /* Default size */
-    height: auto;
-    border-radius: 50%; /* Optional: Makes the logo circular */
+    width: 50px;
   }
-  
-  /* Logo Text */
+
   .logo-text {
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
+    font-size: 20px;
   }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .header {
-      padding: 10px 15px;
-    }
-  
-    .logo {
-      flex-direction: column; /* Stack logo and text vertically */
-      text-align: center;
-    }
-  
-    .logo-image {
-      width: 50px;
-    }
-  
-    .logo-text {
-      font-size: 20px;
-    }
+}
+
+@media (max-width: 480px) {
+  .logo-text {
+    font-size: 18px;
   }
-  
-  @media (max-width: 480px) {
-    .logo-text {
-      font-size: 18px;
-    }
-  
-    .logo-image {
-      width: 40px;
-    }
+
+  .logo-image {
+    width: 40px;
   }
-  
+}

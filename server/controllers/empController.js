@@ -13,7 +13,7 @@ const emploginCheck=async(req, res)=>{
         }
         if(Employee.password!=password)
         {
-            res.status(400).send({msg:"Invalid Password!!!!"});
+            res.status(400).send({msg:"Invalid Password!!!"});
         }
         res.status(200).send(Employee);
     } catch (error) {

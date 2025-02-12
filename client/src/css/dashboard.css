@@ -1,4 +1,4 @@
-/* 
+
 body{
     margin: 0;
     padding: 0;
@@ -15,7 +15,7 @@ body{
     background-color:rgb(35, 38, 38);
     padding-top: 50px;
     width: 15%;
-    /* align-items: center; 
+    /* align-items: center; */
     
 
 }
@@ -32,10 +32,10 @@ body{
 #adminRightData{
     padding: 20px;
     margin-left: 100px;
-} */
+} 
 
-
-/* General Styling */
+/* 
+/* General Styling 
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -44,13 +44,13 @@ body {
 }
 
 /* Dashboard Container */
-#dashboard {
+/* #dashboard {
     display: flex;
     flex-direction: row;
     height: 100vh;
-}
+} */
 
-/* Left Menu */
+/* Left Menu 
 #adminLeftMenu {
     width: 250px;
     background: #007bff;
@@ -61,7 +61,7 @@ body {
     min-height: 100vh;
 }
 
-/* Menu Links */
+/* Menu Links 
 #adminLeftMenu a {
     color: white;
     text-decoration: none;
@@ -78,7 +78,7 @@ body {
     background: #0056b3;
 }
 
-/* Right Section */
+/* Right Section 
 #adminRightData {
     flex-grow: 1;
     padding: 20px;
@@ -86,7 +86,7 @@ body {
     overflow-y: auto;
 }
 
-/* Responsive Design */
+/* Responsive Design 
 @media (max-width: 768px) {
     #dashboard {
         flex-direction: column;
@@ -120,4 +120,4 @@ body {
         font-size: 14px;
         padding: 8px;
     }
-}
+} */

@@ -3,7 +3,7 @@ import { useState,useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { message } from 'antd';
-import "../css/createEmp.css"
+// import "../css/createEmp.css"
 
 
 const CreateEmp=()=>{
@@ -67,7 +67,7 @@ const CreateEmp=()=>{
         <Form.Control type="password" name='password' onChange={handleInput}/>
       </Form.Group> */}
       <br />
-      <Button variant="primary" type="submit" onClick={handleSubmit}>
+      <Button style={{backgroundColor:"#098196"}} type="submit" onClick={handleSubmit}>
         Submit
       </Button>
     </Form>

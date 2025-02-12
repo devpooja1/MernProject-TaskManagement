@@ -22,10 +22,10 @@ const Dashboard=()=>{
                 <br />
                 <br />
                 <Link to="/"  
-                style={{listStyle:'none', color:'white', textDecoration:'none'}}
+                style={{listStyle:'none', color:'white', textDecoration:'none' }}
                  onClick={()=>{navigate("/login")}}>Logout</Link>
                         
-                {/* <button onClick={()=>{navigate("/login")}}>Logout</button> */}
+                
 
             </div>
             <div id="adminRightData" >

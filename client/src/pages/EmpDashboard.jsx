@@ -19,13 +19,14 @@ const navigate=useNavigate();
                 <Link to="changepassword" style={{listStyle:'none', color:'white', textDecoration:'none'}}>Change Password</Link>
                 <br />
                 <br />
+                {/* <Link to="viewtask" style={{listStyle:'none', color:'white', textDecoration:'none'}}>View Task Status</Link> */}
                 <br />
                 <br />
                 <Link to="/"  
                 style={{listStyle:'none', color:'white', textDecoration:'none'}}
                  onClick={()=>{navigate("/login")}}>Logout</Link>
                         
-                
+                {/* <button onClick={()=>{navigate("/login")}}>Logout</button> */}
 
             </div>
             <div id="empRightData" >

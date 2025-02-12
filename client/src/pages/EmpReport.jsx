@@ -77,9 +77,9 @@ const EmpReport=()=>{
                         )}
                         </td>
                         <td>
-                            <Button variant="primary" size="sm"
+                            <Button style={{backgroundColor:"#098196" , fontSize:"10px"}} size="sm"
                   onClick={()=>{reassignTask(key._id)}}
-                 style={{fontSize:"10px"}}>ReAssign</Button>
+                 >ReAssign</Button>
                         </td>
                 </tr>
                 </>

@@ -5,7 +5,7 @@ import {
   MDBIcon,
   MDBBtn
 } from 'mdb-react-ui-kit';
-import "../css/footer.css";
+// import "../css/footer.css";
 
 
 const Footer=()=>{
