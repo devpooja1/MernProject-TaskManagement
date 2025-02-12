@@ -3,6 +3,7 @@ import { useState,useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { message } from 'antd';
+import "../css/CreateEmp.css"
 
 
 const CreateEmp=()=>{

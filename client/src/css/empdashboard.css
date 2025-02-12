@@ -1,4 +1,4 @@
-
+/* 
 body{
     margin: 0;
     padding: 0;
@@ -15,7 +15,7 @@ body{
     background-color:rgb(35, 38, 38);
     padding-top: 50px;
     width: 15%;
-    /* align-items: center; */
+    /* align-items: center; 
     
 
 }
@@ -32,4 +32,71 @@ body{
 #empRightData{
     padding: 20px;
     margin-left: 100px;
+} */
+
+
+
+/* General Layout */
+#empdashboard {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f4f4f4;
 }
+
+/* Left Menu Styling */
+#empLeftMenu {
+    width: 250px;
+    background: #007bff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+#empLeftMenu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+#empLeftMenu a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Right Content Area */
+#empRightData {
+    flex-grow: 1;
+    padding: 20px;
+    background: white;
+    overflow: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #empdashboard {
+        flex-direction: column;
+    }
+
+    #empLeftMenu {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #empLeftMenu a {
+        font-size: 16px;
+        padding: 8px;
+    }
+}
+
+
+

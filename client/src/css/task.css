@@ -1,0 +1,84 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Heading Styling */
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background: #007bff;
+    color: white;
+}
+
+/* Modal Styling */
+.modal-body input, 
+.modal-body textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.modal-footer button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+/* Save button */
+.modal-footer .btn-success {
+    background: #28a745;
+    border: none;
+    transition: 0.3s;
+}
+
+.modal-footer .btn-success:hover {
+    background: #218838;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+
+    .modal-body input, .modal-body textarea {
+        font-size: 14px;
+    }
+
+    .modal-footer button {
+        font-size: 14px;
+    }
+}

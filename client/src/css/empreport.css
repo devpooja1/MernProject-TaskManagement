@@ -1,0 +1,82 @@
+/* General Table Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Table Container */
+table {
+    width: 95%;
+    max-width: 1300px;
+    margin: auto;
+    background: white;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+}
+
+/* Table Header */
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+/* Checkbox Column */
+td:first-child {
+    width: 50px;
+}
+
+/* Hover Effect */
+tr:hover {
+    background: #f1f1f1;
+}
+
+/* Responsive Table */
+@media (max-width: 1024px) {
+    table {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    table {
+        font-size: 11px;
+    }
+
+    th, td {
+        padding: 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    table {
+        font-size: 10px;
+    }
+
+    th, td {
+        padding: 5px;
+    }
+
+    /* Make table scrollable */
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}

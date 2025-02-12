@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import {message}   from "antd";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import "../css/changepassword.css"
 
 const ChangePassword=()=>{
     const[input, setInput]=useState({});

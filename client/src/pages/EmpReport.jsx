@@ -5,6 +5,7 @@ import rightimg from "../images/right.jpg";
 import wrongimg from "../images/wrong.jpg";
 import Button from 'react-bootstrap/Button';
 import { message } from "antd";
+import "../css/empreport.css"
 
 const EmpReport=()=>{
     const [mydata, setMydata] = useState([]);

@@ -1,87 +1,65 @@
-/* General header styling */
-.header {
-  width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+/* Footer Styling */
+.bg-dark {
+  background-color: #343a40 !important; /* Dark background */
+}
+
+.text-white {
+  color: white !important;
+}
+
+.footer-container {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Social Media Icons */
+.footer-container section .m-1 {
+  transition: transform 0.3s ease-in-out;
+}
+
+.footer-container section .m-1:hover {
+  transform: scale(1.2); /* Slightly increase size on hover */
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+  background-color: #098196;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.footer-bottom a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+    padding: 15px;
   }
-  
-  /* Logo area */
-  .logo {
-    display: flex;
-    align-items: center;
+
+  .footer-bottom {
+    height: auto;
+    padding: 10px;
+    font-size: 14px;
   }
-  
-  .logo-image {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    padding: 10px;
   }
-  
-  .logo-text {
-    font-size: 1.5rem;
-    font-weight: bold;
+
+  .footer-bottom {
+    font-size: 12px;
   }
-  
-  /* Navigation links */
-  .nav {
-    flex-grow: 1;
-    text-align: center;
-  }
-  
-  .nav-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 20px;
-  }
-  
-  .nav-links li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 1rem;
-    font-weight: 500;
-    transition: color 0.3s ease;
-  }
-  
-  .nav-links li a:hover {
-    color: #ffdd57;
-  }
-  
-  /* Right-side header content */
-  .header-right {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-  }
-  
-  .search-bar {
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 0.9rem;
-  }
-  
-  .user-profile {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .user-avatar {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: 2px solid #fff;
-  }
-  
-  .user-name {
-    font-size: 0.9rem;
-    font-weight: 500;
-  }
-  
+}

@@ -3,6 +3,7 @@ import axios from "axios";
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import "../css/task.css"
 
 const AssignTask=()=>{
     const [mydata, setMydata] = useState([]);

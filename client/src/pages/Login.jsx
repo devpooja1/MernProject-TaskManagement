@@ -37,7 +37,7 @@ const Login=()=>{
     else 
     if(usertype=="employee")
     {
-       try {
+       try {     
         let api = "https://mernproject-taskmanagement.onrender.com/employee/employeelogin";
         const response= await axios.post(api, {userid:userid, password:password});
         // console.log(response.data);
@@ -57,15 +57,15 @@ const Login=()=>{
     return(
         <>
         <center>
-    <div className="d-flex flex-column ms-5" style={{marginTop:'20px'}}>
+    <div  style={{marginTop:'20px', marginBottom:"40px", marginTop:"40px"}}>
 
       <div className="text-center">
         <img src="src\images\img1.jpg"
-          style={{width: '185px'}} alt="logo" />
-        <h4 className="mt-1 mb-5 pb-1">We are The Team</h4>
+          style={{width: '200px'}} alt="logo" />
+        <h4 className="mt-1 mb-5 pb-1" style={{color:"#098196", fontSize:"25px", fontWeight:"600"}}>We are The Team</h4>
       </div>
-
-      <p>Please login to your account</p>
+      
+      <p style={{color:"#098196", fontSize:"25px", fontWeight:"600"}}>Please login to your account</p>
 
         <input type="text" placeholder="Enter your ID" value={userid}  onChange={(e)=>{setUserID(e.target.value)}}/>
         <br/>
