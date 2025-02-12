@@ -2,6 +2,8 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import {message} from "antd";
+import { Container, Row, Col, Form, Button } from "react-bootstrap";
+// import Button from "react-bootstrap/Button";
 import { useNavigate } from "react-router-dom";
 // import "../css/login.css"
 
@@ -56,7 +58,7 @@ const Login=()=>{
   }
     return(
         <>
-        <center>
+        {/* <center>
     <div  style={{marginTop:'20px', marginBottom:"40px", marginTop:"40px"}}>
 
       <div className="text-center">
@@ -81,13 +83,55 @@ const Login=()=>{
       </select>
       <br/>
       <br />
-      <button onClick={handleSubmit}>Login</button>
+      <Button style={{backgroundColor:"#098196"}} onClick={handleSubmit}>Login</Button>
 
      
 
     </div>
 
-</center>
+</center> */}
+        <Container className="d-flex justify-content-center align-items-center vh-100">
+      <Row className="w-100">
+        <Col xs={12} md={6} lg={4} className="mx-auto text-center p-4 shadow rounded bg-white">
+          <img src="src/images/img1.jpg" alt="logo" className="mb-3" style={{ width: "150px" }} />
+          <h4 style={{color:"#098196", fontSize:"20px"}}>We are The Team</h4>
+          <p style={{color:"#098196",fontSize:"10px"}}>Please login to your account</p>
+
+          <Form>
+            <Form.Group className="mb-3">
+              <Form.Control
+                type="text"
+                placeholder="Enter your ID"
+                value={userid}
+                onChange={(e) => setUserID(e.target.value)}
+              />
+            </Form.Group>
+
+            <Form.Group className="mb-3">
+              <Form.Control
+                type="password"
+                placeholder="Enter your Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </Form.Group>
+
+            <Form.Group className="mb-3">
+              <Form.Select value={usertype} onChange={(e) => setUsertype(e.target.value)}>
+                <option value="">Login as a ......</option>
+                <option value="admin">Admin</option>
+                <option value="employee">Employee</option>
+              </Form.Select>
+            </Form.Group>
+
+            <Button style={{backgroundColor:"#098196"}} className="w-100" onClick={handleSubmit}>
+              Login
+            </Button>
+          </Form>
+        </Col>
+      </Row>
+    </Container>
+
 
         </>
     )
